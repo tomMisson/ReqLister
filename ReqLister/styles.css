@@ -1,0 +1,15 @@
+textarea {
+    resize: none;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    padding:10px;
+}
+
+nav ul {
+    display: inline-block;
+}
