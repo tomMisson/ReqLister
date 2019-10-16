@@ -2,14 +2,10 @@
 
 session_start();
 
-$requirements = array();
-
-$_SESSION['data'] = [];
-
 require 'menu.php';
 
 echo <<<_END
-        <form method="post">
+        <form action="addData.php" method="post">
             <ul>
                 <li>
                     <label for="Name">Title:</label>
@@ -74,33 +70,11 @@ echo <<<_END
                 </li>
             </ul>
             <button type="submit" name="submit">Submit</button>
-            <button type="submitSess" name="submit">Push to session</button>
         </form>
     </body>
     </html>
 _END;
 
-if (isset($_POST['submit'])){
-   $data  = [
-       'title' => $_POST['Name'],
-       'Desc' => $_POST['Desc'],
-       'Rationale' => $_POST['Rationale'],
-       'Originator' => $_POST['Originator'],
-       'Fit' => $_POST['Fit'],
-       'CustSat' => $_POST['CustSat'],
-       'CustDisSat' => $_POST['CustSat'],
-       'priority' => $_POST['CustSat'],
-       'conflicts' => $_POST['conflicts']
-   ];
 
-   array_push($requirements, $data);
-   
-
-}
-
-if (isset($_POST['submitSess'])){
-    $_SESSION['data'] = json_encode($requirements);
-    header("Location: view.php");
-}
 
 ?>
