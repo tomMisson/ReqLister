@@ -5,7 +5,7 @@ This is a tool that I will be using to register a list of requirements (function
 Run locally with some form of apatche server 
 
 ```
-http://localhost/ReqLister/
+http://localhost/
 ```
 
 ## Contributions
